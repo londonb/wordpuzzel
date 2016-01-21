@@ -19,9 +19,7 @@ var splitString = function(string) {
 
 for (var i = 0; i < strArr.length; i++) {
   if (strArr[i] === "a") {
-
     strArr[i] = strArr[i].replace("a","-");
-
     // return strArr;
     } else if (strArr[i] === "e") {
       strArr[i] = strArr[i].replace("e","-");
@@ -42,27 +40,27 @@ for (var i = 0; i < strArr.length; i++) {
       strArr[i] = strArr[i].replace("O","-");
     }  else if (strArr[i] === "U") {
       strArr[i] = strArr[i].replace("U","-");
-    }console.log(strArr);
+    }
 }
 
 var outputString = strArr.join("");
 
-console.log(outputString);
+// console.log(outputString);
 // return strArr;
 return outputString;
 
 }
-// }
+
 $(document).ready(function(){
-//
+
   $("form#replaceVowel").submit(function(event) {
     var string = $("input#string").val();
     var toPrint = splitString(string);
 
-    $("#printTo").append(toPrint)
-console.log(output);
+    $("#printTo").append("<br><hr>",toPrint,"<br><hr><strong>Good Luck!</strong>");
+    $("#hide").hide();
 
-
-  });
   event.preventDefault();
+  });
+
 });

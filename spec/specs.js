@@ -10,13 +10,13 @@ describe('vowel', function() {
 // });
 // });
 describe('splitString', function() {
-  it("will split the string into an array", function(){
+  it("will split the string into an array with individual letters", function(){
   expect(splitString('hallE you')).to.eql(['h','-','l','l','-',' ','y','-','-']);
 });
 });
 
 describe('splitString', function() {
-  it("will split the string into an array", function(){
+  it("will join the array elements back into a string.", function(){
   expect(splitString('hallE you')).to.equal('h-ll- y--');
 });
 });
